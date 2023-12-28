@@ -1,7 +1,8 @@
 //import java.io.IOException;
+
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
@@ -161,51 +162,212 @@ public class Main {
 //            }
 //            System.out.print("\n");
 //        }while(control != 2);
+
 //        Task 9
+//        Scanner scanner = new Scanner(System.in);
+//        String a = null;
+//        int control = 0;
+//        Random rand = new Random();
+//        int [] arr;
+//        do {
+//            System.out.println("Hello! Pick an action:");
+//            System.out.println("1 - Start program");
+//            System.out.println("2 - Exit");
+//            control = Integer.parseInt(scanner.nextLine());
+//            if (control == 1){
+//                do {
+//                    if (a != null) System.out.println("Invalid size");
+//                    System.out.println("Enter array size");
+//                    a = scanner.nextLine();
+//                } while(!a.matches("[0-9]+"));
+//                int intA = Integer.parseInt(a);
+//                arr = new int[intA];
+//                int min = 0;
+//                int max = 0;
+//                int negatives = 0;
+//                int positives = 0;
+//                int zeros = 0;
+//                for (int i = 0; i < intA; i++)
+//                {
+//                    arr[i] = rand.nextInt(-100, 100);
+//                    if (i == 0){
+//                        min = arr[i];
+//                        max = arr[i];
+//                    }
+//                    if (arr[i] < min) min = arr[i];
+//                    if (arr[i] > max) max = arr[i];
+//                    if (arr[i] < 0) negatives++;
+//                    else if (arr[i] > 0) positives++;
+//                    else zeros++;
+//                }
+//                System.out.println("Results: ");
+//                System.out.println("Min element: " + String.valueOf(min));
+//                System.out.println("Max element: " + String.valueOf(max));
+//                System.out.println("Negatives: " + String.valueOf(negatives));
+//                System.out.println("Positives: " + String.valueOf(positives));
+//                System.out.println("Zeros: " + String.valueOf(zeros));
+//            }
+//            System.out.print("\n");
+//        }while(control != 2);
+
+//        Task 10
+//        Scanner scanner = new Scanner(System.in);
+//        String a = null;
+//        int control = 0;
+//        Random rand = new Random();
+//        do {
+//            System.out.println("Hello! Pick an action:");
+//            System.out.println("1 - Start program");
+//            System.out.println("2 - Exit");
+//            control = Integer.parseInt(scanner.nextLine());
+//            if (control == 1){
+//                do {
+//                    if (a != null) System.out.println("Invalid size");
+//                    System.out.println("Enter array size");
+//                    a = scanner.nextLine();
+//                } while(!a.matches("[0-9]+"));
+//                int intA = Integer.parseInt(a);
+//                ArrayList<Integer> arr = new ArrayList<Integer>(intA);
+//                ArrayList<Integer> evens = new ArrayList<Integer>();
+//                ArrayList<Integer> odds = new ArrayList<Integer>();
+//                ArrayList<Integer> negatives = new ArrayList<Integer>();
+//                ArrayList<Integer> positives = new ArrayList<Integer>();
+//                for (int i = 0; i < intA; i++)
+//                {
+//                    arr.add(rand.nextInt(-100, 100));
+//                    if (arr.get(i) % 2 == 0) evens.add(arr.get(i));
+//                    else odds.add(arr.get(i));
+//                    if (arr.get(i) < 0) negatives.add(arr.get(i));
+//                    else positives.add(arr.get(i));
+//                }
+//                System.out.println("Results: ");
+//                PrintArrayList(evens, "Even");
+//                PrintArrayList(odds, "Odd");
+//                PrintArrayList(negatives, "Negative");
+//                PrintArrayList(positives, "Positive");
+//            }
+//            System.out.print("\n");
+//        }while(control != 2);
+
+//        Task 11
+//        Scanner scanner = new Scanner(System.in);
+//        int control = 0;
+//        do {
+//            String len = null;
+//            String ch = null;
+//            String dir = null;
+//            System.out.println("Hello! Pick an action:\n1 - Start program\n2 - Exit");
+//            control = Integer.parseInt(scanner.nextLine());
+//            if (control == 1){
+//                do {
+//                    if (len != null) System.out.println("Invalid length");
+//                    System.out.println("Enter line length");
+//                    len = scanner.nextLine();
+//                } while(!len.matches("[0-9]+"));
+//                int intLen = Integer.parseInt(len);
+//
+//                do {
+//                    if (ch != null) System.out.println("Invalid char");
+//                    System.out.println("Enter char to use");
+//                    ch = scanner.nextLine();
+//                } while(!ch.matches("[a-zA-Z0-9!@#$%^&*()-]"));
+//
+//                do {
+//                    if (dir != null) System.out.println("Invalid direction");
+//                    System.out.println("Enter direction for the line:\n1 - Horizontal\n2 - Vertical");
+//                    dir = scanner.nextLine();
+//                } while(!dir.matches("[12]"));
+//                int intDir = Integer.parseInt(dir);
+//                PrintCustomLine(intLen, ch.charAt(0), intDir);
+//            }
+//            System.out.print("\n");
+//        }while(control != 2);
+
+//        Task 12
         Scanner scanner = new Scanner(System.in);
-        String a = null;
         int control = 0;
-        Random rand = new Random();
-        int [] arr;
         do {
-            System.out.println("Hello! Pick an action:");
-            System.out.println("1 - Start program");
-            System.out.println("2 - Exit");
+            String len = null;
+            String dir = null;
+            Random rand = new Random();
+            System.out.println("Hello! Pick an action:\n1 - Start program\n2 - Exit");
             control = Integer.parseInt(scanner.nextLine());
-            if (control == 1){
+            if (control == 1) {
                 do {
-                    if (a != null) System.out.println("Invalid size");
+                    if (len != null) System.out.println("Invalid size");
                     System.out.println("Enter array size");
-                    a = scanner.nextLine();
-                } while(!a.matches("[0-9]+"));
-                int intA = Integer.parseInt(a);
-                arr = new int[intA];
-                int min = 0;
-                int max = 0;
-                int negatives = 0;
-                int positives = 0;
-                int zeros = 0;
-                for (int i = 0; i < intA; i++)
-                {
+                    len = scanner.nextLine();
+                } while (!len.matches("[0-9]+"));
+                int intLen = Integer.parseInt(len);
+                int[] arr = new int[intLen];
+
+                do {
+                    if (dir != null) System.out.println("Invalid direction");
+                    System.out.println("Choose sorting direction:\n1 - Ascending\n2 - Descending");
+                    dir = scanner.nextLine();
+                } while (!dir.matches("[12]"));
+                int intDir = Integer.parseInt(dir);
+
+                for (int i = 0; i < intLen; i++) {
                     arr[i] = rand.nextInt(-100, 100);
-                    if (i == 0){
-                        min = arr[i];
-                        max = arr[i];
-                    }
-                    if (arr[i] < min) min = arr[i];
-                    if (arr[i] > max) max = arr[i];
-                    if (arr[i] < 0) negatives++;
-                    else if (arr[i] > 0) positives++;
-                    else zeros++;
                 }
-                System.out.println("Results: ");
-                System.out.println("Min element: " + String.valueOf(min));
-                System.out.println("Max element: " + String.valueOf(max));
-                System.out.println("Negatives: " + String.valueOf(negatives));
-                System.out.println("Positives: " + String.valueOf(positives));
-                System.out.println("Zeros: " + String.valueOf(zeros));
+
+                arr = SortArr(arr, intDir);
+                System.out.print("Sorted array: ");
+                for (int i = 0; i < arr.length; i++) {
+                    System.out.print(String.valueOf(arr[i] + " "));
+                }
+                System.out.print("\n");
             }
             System.out.print("\n");
-        }while(control != 2);
+        } while (control != 2);
+    }
+
+    public static int[] SortArr(int[] arr, int dir) {
+        if (dir == 1) {
+            for (int i = 0; i < arr.length; i++) {
+                for (int j = i + 1; j < arr.length; j++) {
+                    if (arr[i] > arr[j]) {
+                        int t = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = t;
+                    }
+                }
+            }
+        } else {
+            for (int i = 0; i < arr.length; i++) {
+                for (int j = i + 1; j < arr.length; j++) {
+                    if (arr[i] < arr[j]) {
+                        int t = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = t;
+                    }
+                }
+            }
+        }
+        return arr;
+    }
+
+    public static void PrintCustomLine(int length, char ch, int dir) {
+        if (dir == 1) {
+            for (int i = 0; i < length; i++) {
+                System.out.print(ch);
+            }
+            System.out.print("\n");
+        } else {
+            for (int i = 0; i < length; i++) {
+                System.out.println(ch);
+            }
+        }
+    }
+
+    public static void PrintArrayList(ArrayList<Integer> list, String s) {
+        System.out.print(s + " array values: ");
+        for (Integer num : list) {
+            System.out.print(String.valueOf(num) + " ");
+        }
+        System.out.print("\n");
     }
 }
+
+
